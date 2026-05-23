@@ -8,6 +8,9 @@ DATA_DIR     = PROJECT_ROOT / "data"
 OUTPUT_DIR   = PROJECT_ROOT / "output"
 
 # Path configurabili via .env (per file fuori dal progetto)
-IMAGE_PATH = Path("directorySingolaImmagine")
+IMAGE_PATH = Path("DirectorySingolaImmagine")
 CARTELLA_IMMAGINI = Path("DirectoryCartellaImmagini")
-FILE_EXCEL        = Path("directoryFileExcel")
+FILE_EXCEL        = Path("DirectoryFileExcel")
+TABELLA_PSICOLOGA = Path("DirectoryFileExcelPsicologa")
+TABELLA_CONFRONTO = Path("DirectoryFileExcelConfronto")
+MATRICE_CONFUSIONE = Path("DirectoryFileExcelMatriceConfusione")
