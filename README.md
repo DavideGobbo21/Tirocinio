@@ -1,43 +1,79 @@
-# TIrocinio
+# Tirocinio — Analisi Disegni Infantili
 
-Repository per il progetto di tirocinio presso l'università degli studi di Milano
+Repository per il progetto di tirocinio presso l'Università degli Studi di Milano.
 
-# Requirements:
+---
 
-- Ollama (installato e in esecuzione)
+## Requisiti
+
+- [Ollama](https://ollama.com/download) installato e in esecuzione
 - Python 3.11
 
-# Installazione e setup
+---
 
-1) Clona il repository
-2) Installa Ollama da https://ollama.com/download
-3) esegui lo script di setup: esso crea un ambiente virtuale, lo attiva e installa tutte le dipendenze da requirements.txt
+## Installazione e setup
 
-# Configurazione:
-modifica config.py per impostare i percorsi corretti sulla tua macchina:
-IMAGE_PATH = Path di una singola immagine (testing)
-CARTELLA_IMMAGINI = Path della cartella con le immagini da analizzare
-FILE_EXCEL        = Path di output di analisiDisegni.py (lo crea automaticamente se non esiste, dare nome appopriato)
-TABELLA_PSICOLOGA = Path della tabella della psicologa (../TabellaPsicologi/tabellaPsicologa.xlsx)
-TABELLA_CONFRONTO = Path della tabella da analizzare 
-MATRICE_CONFUSIONE = Path di output di confusionMatrix.py (lo crea automaticamente se non esiste, dare nome appropriato)
+1. Clona il repository
 
-modifica analisiDisegni.py per scegliere il modello di analisi:
-MODELLO : "nome del modello preso da Ollama"
-ricordare sempre di fare Ollama pull nomeModello su terminale
+2. Installa Ollama da [https://ollama.com/download](https://ollama.com/download)
 
-# Utilizzo:
-python analisiDisegni.py:
+3. Esegui lo script di setup (Windows — PowerShell):
+   Lo script crea un ambiente virtuale, lo attiva e installa tutte le dipendenze da `requirements.txt`.
 
-il programma legge tutti i file .tif della cartella CARTELLA_IMMAGINE
-invia ogni immagine al modello scelto
-classifica il disegno secondo i criteri definiti
-salva i risultati riga per riga su file excel
-riprende automaticamente da dove si è interrotto in caso di crash
+---
 
-python confusionMatrix.py:
+## Configurazione
 
-il programma legge le due tabelle su cui fare il confronto
-genera una matrice di confusione e le metriche per ogni colonna
-evidenzia i dati mancanti nel foglio finale
-salva i risultati su file excel
+### `config.py`
+
+Modifica `config.py` per impostare i percorsi corretti sulla tua macchina:
+
+| Variabile | Descrizione |
+|---|---|
+| `IMAGE_PATH` | Path di una singola immagine (per testing) |
+| `CARTELLA_IMMAGINI` | Path della cartella con le immagini da analizzare |
+| `FILE_EXCEL` | Output di `analisiDisegni.py` — creato automaticamente se non esiste |
+| `TABELLA_PSICOLOGA` | Path della tabella della psicologa (es. `../TabellaPsicologi/tabellaPsicologa.xlsx`) |
+| `TABELLA_CONFRONTO` | Path della tabella da confrontare |
+| `MATRICE_CONFUSIONE` | Output di `confusionMatrix.py` — creato automaticamente se non esiste |
+
+### `analisiDisegni.py`
+
+Modifica la variabile `MODELLO` per scegliere il modello da usare:
+
+```python
+MODELLO = "nome_modello"  # nome del modello installato in Ollama
+```
+
+Ricordati di scaricare il modello prima di eseguire lo script:
+
+```bash
+ollama pull nome_modello
+```
+
+---
+
+## Utilizzo
+
+### `analisiDisegni.py`
+
+```bash
+python analisiDisegni.py
+```
+
+- Legge tutti i file `.tif` dalla cartella `CARTELLA_IMMAGINI`
+- Invia ogni immagine al modello scelto
+- Classifica il disegno secondo i criteri definiti
+- Salva i risultati riga per riga su file Excel
+- Riprende automaticamente da dove si era interrotto in caso di crash
+
+### `confusionMatrix.py`
+
+```bash
+python confusionMatrix.py
+```
+
+- Legge le due tabelle su cui fare il confronto
+- Genera una matrice di confusione e le metriche (precision, recall, accuracy) per ogni colonna
+- Evidenzia i dati mancanti in un foglio dedicato
+- Salva i risultati su file Excel
