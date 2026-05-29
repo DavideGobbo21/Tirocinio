@@ -17,7 +17,7 @@ Repository per il progetto di tirocinio presso l'Università degli Studi di Mila
 
 2. Installa Ollama da [https://ollama.com/download](https://ollama.com/download)
 
-3. Esegui lo script di setup (Windows — PowerShell):
+3. Esegui lo script di setup:
    Lo script crea un ambiente virtuale, lo attiva e installa tutte le dipendenze da `requirements.txt`.
 
 ---
