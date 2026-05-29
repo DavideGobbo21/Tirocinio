@@ -1,0 +1,14 @@
+disegno_id;tipologia;dimensione;colore;posizione;orientamento;accuratezza;alim;io;sport;assoc
+335;+-;L;R-D;C;S;A-D;TRUE;TRUE;FALSE;++
+308;+;L;R-L;C;S;A-ND;TRUE;FALSE;FALSE;--
+337;+;L;R-L;C;S;A-ND;TRUE;TRUE;FALSE;++
+336;+;L;R-L;C;S;A-ND;TRUE;TRUE;FALSE;++
+16;+;N;R-D;C;D;A-ND;FALSE;TRUE;FALSE;--
+448;+-;N;NR-D;C;S;NA-ND;FALSE;FALSE;FALSE;--
+226;+-;L;R-D;C;S;A-ND;TRUE;FALSE;FALSE;--
+142;+;N;R-L;C;S;A-ND;TRUE;FALSE;FALSE;--
+46;+;N;R-L;P-L;S;A-ND;TRUE;FALSE;FALSE;--
+146;+;N;R-D;C;S;A-D;TRUE;FALSE;FALSE;++
+;;;;;;;;;;
+ ;;;;;;;;;;
+ ;;;;;;;;;;
