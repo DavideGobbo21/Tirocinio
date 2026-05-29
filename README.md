@@ -27,14 +27,16 @@ MODELLO : "nome del modello preso da Ollama"
 ricordare sempre di fare Ollama pull nomeModello su terminale
 
 # Utilizzo:
-python analisiDisegni.py
+python analisiDisegni.py:
+
 il programma legge tutti i file .tif della cartella CARTELLA_IMMAGINE
 invia ogni immagine al modello scelto
 classifica il disegno secondo i criteri definiti
 salva i risultati riga per riga su file excel
 riprende automaticamente da dove si è interrotto in caso di crash
 
-python confusionMatrix.py
+python confusionMatrix.py:
+
 il programma legge le due tabelle su cui fare il confronto
 genera una matrice di confusione e le metriche per ogni colonna
 evidenzia i dati mancanti nel foglio finale
